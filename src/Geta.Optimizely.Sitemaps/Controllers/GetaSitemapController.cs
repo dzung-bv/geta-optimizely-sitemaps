@@ -40,9 +40,9 @@ public class GetaSitemapController : Controller
     }
 
     [Route("sitemap.xml", Name = "Sitemap without path")]
-    [Route("{path}sitemap.xml", Name = "Sitemap with path")]
+    //[Route("{path}sitemap.xml", Name = "Sitemap with path")]
     [Route("{language}/sitemap.xml", Name = "Sitemap with language")]
-    [Route("{language}/{path}sitemap.xml", Name = "Sitemap with language and path")]
+    //[Route("{language}/{path}sitemap.xml", Name = "Sitemap with language and path")]
     public ActionResult Index()
     {
         var sitemapData = _sitemapRepository.GetSitemapData(Request.GetDisplayUrl());
